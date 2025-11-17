@@ -13,7 +13,7 @@
         <li>Interface সহজে extend করা যায়</li>
         <li>type extend করা যায় কিন্তু '&' ব্যবহার করা লাগে </li>
 
-        ``
+        
         interface User {
             name: string;
             age: number;
@@ -32,13 +32,13 @@
         role: string;
         };
 
-        ``
+        
 
     b) Declaration Merging: 
         interface → বারবার ডিক্লেয়ার করলে merge হয়ে যায়
         type → merge হয় না (error দিবে)
 
-        ``
+        
         interface User {
             name: string;
             }
@@ -48,10 +48,9 @@
 
         // Resulting interface:
         // { name: string; age: number; }
-
-        ``
-## ইন্টারফেস object structure এর জন্য ভালো।
-## টাইপ more flexible এবং complex definition এর জন্য বেশি powerful।
+        
+    **ইন্টারফেস object structure এর জন্য ভালো।**
+    **টাইপ more flexible এবং complex definition এর জন্য বেশি powerful।** 
 
 ## Blog 2
 
@@ -61,28 +60,28 @@
     TypeScript এর টাইপ চেকিং বন্ধ হয়ে যায়। এটা ব্যবহার করলে কোন error দিবে না
 
 
-    ``
-    let value: any;
+    
+        let value: any;
 
-    value = 10;
-    value = "Hello";
-    value = true;
+        value = 10;
+        value = "Hello";
+        value = true;
 
-    value.toUpperCase(); // No error, even if value is not a string
-    ``
+        value.toUpperCase(); // No error, even if value is not a string
+    
 
     unknown — safer alternative to any
     যেকোন ভ্যালু রাখা যাবে কিন্তু
     ভ্যালু ব্যবহার করার আগে TypeScript আপনাকে টাইপ চেক করতে বাধ্য করবে।
     
-    let data: unknown;
-    data = 10;
-    data = "Hello";
+        let data: unknown;
+        data = 10;
+        data = "Hello";
 
     data.toUpperCase(); // ❌ Error — TypeScript doesn't know it's a string
 
-    never — এমন কিছু যা কখনো ঘটে না
-    never টাইপ বোঝায় এমন একটি পরিস্থিতি যেখানে কখনোই কোনো ভ্যালু পাওয়া যাবে না।
+    **never — এমন কিছু যা কখনো ঘটে না**
+    **never টাইপ বোঝায় এমন একটি পরিস্থিতি যেখানে কখনোই কোনো ভ্যালু পাওয়া যাবে না।**
 
 
                 

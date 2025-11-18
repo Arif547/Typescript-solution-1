@@ -36,7 +36,7 @@ class Person {
 
 
 function filterByRating (input: {title: string; rating: number}[]) : {title: string; rating: number}[]{
-  return input.filter(item=> item.rating >= 4);
+  return input.filter(item=> item.rating >= 4 && (item.rating <=5));
 }
 
 
